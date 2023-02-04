@@ -108,10 +108,13 @@ html, body{
       background: #fff;
       padding: 15px;
       margin-bottom: 18px;
+
       h5 {
         font-size: 18px;
-        margin-bottom: 10px;
+        margin-bottom: 10px; 
+        cursor: pointer;
       }
+
       &-color {
         display: flex;
         span {
@@ -125,6 +128,13 @@ html, body{
           color: var(--textColor);
           text-indent: -99999px;
           width: 70px;
+        }
+      }
+
+      &.selected {
+        span {
+          flex: 1;
+          text-indent: 0;
         }
       }
     }
