@@ -34,6 +34,10 @@ function App() {
       }
     }, [copied])
 
+    useEffect(() => {
+      setBrands(brandsArray.filter(brand => brand.title.toLowerCase().includes(search)))
+    }, [search])
+
     const data = {
       brands,
       selectedBrands,
