@@ -74,6 +74,9 @@ html, body{
     border-bottom: 1px solid #ccc;
     display: flex;
     position: sticky;
+    justify-content: space-between;
+    background: #fff;
+    align-items: center;
     top: 0;
     .search {
       flex: 1;
@@ -97,6 +100,48 @@ html, body{
         height: 100%;
         font-size: 16px;
         padding: 0 20px 0 60px;
+      }
+    }
+
+    .download {
+      padding-right: 25px;
+      display: flex;
+      align-items: center;
+
+      .actions {
+        display: flex;
+        margin-right: 15px;
+        a,button {
+          height: 30px;
+          width: 30px;
+          background: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          svg {
+            height: 15px;
+            width: 15px;
+          }
+        }
+      }
+
+      .selected {
+        font-size: 14px;
+        font-weight: 500;
+        color: #999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        svg {
+            display: block;
+            margin-right: 7px;
+            path {
+              stroke: #999;
+            }
+        }
       }
     }
   }
@@ -142,7 +187,7 @@ html, body{
   }
 }
 
-.copied {
+.copied { 
   position: fixed;
   bottom: 20px;
   right: 20px;
