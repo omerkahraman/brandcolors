@@ -5,6 +5,7 @@ import MainContext from "../MainContext";
 import { useContext, useEffect } from "react";
 import LazyLoad from 'react-lazyload';
 import Download from "./Download";
+import Loader from "./Loader";
 
 function Collection () {
     const {slugs} = useParams();
@@ -38,7 +39,7 @@ function Collection () {
                 {selectedBrands.map(slug => {
                     let brand = brands.find(brand => brand.slug === slug);
                     return(
-                    <LazyLoad key={brand.slug} once={true} overflow={true} placeholder="Loading...">
+                    <LazyLoad key={brand.slug} once={true} overflow={true} placeholder={<Loader />}>
                         <Brand brand={brand} />
                     </LazyLoad>
                     )
